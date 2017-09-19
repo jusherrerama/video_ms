@@ -25,19 +25,12 @@ class VideosController < ApplicationController
   # POST /videos
   # POST /videos.json
   def create
-
-
-    @video = Video.new(video_params)
-    puts"ACACACACACACACAACACACACACACACACACACAA111111"
+     @video = Video.new(video_params)
      if @video.save
-
-       puts"ACACACACACACACAACACACA222222222222222222222222222"
-        render json: @video, status: :created
-      else
+          render json: @video, status: :created
+     else
           render json: @video.errors, status: :unprocessable_entity
-      end
-
-
+     end
   end
 
   # PATCH/PUT /videos/1
