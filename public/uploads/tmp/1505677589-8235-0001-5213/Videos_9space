@@ -1,0 +1,3 @@
+rails new videos_ms --api
+
+rails g scaffold Libro nombre:string comentarios:text evaluacion:integer 
