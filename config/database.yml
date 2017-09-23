@@ -4,8 +4,8 @@ default: &default
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
     username: root
     password: 031.053.
-    #host: videos_db
-    #socket: /tmp/mysql.sock
+    host: videos_db
+    socket: /tmp/mysql.sock
 development:
     <<: *default
     database: videos

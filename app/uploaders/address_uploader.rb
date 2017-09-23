@@ -4,13 +4,16 @@ class AddressUploader < CarrierWave::Uploader::Base
   storage :fog
   process :save_video_duration
 #  process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
-  version :thumb do
-      process thumbnail: [{format: 'png', quality: 10,seek: '50%' ,square: true, size: 192, strip: false, logger: Rails.logger}]
-      def full_filename for_file
-        png_name for_file, version_name
-      end
-      process :fix_content_type
-  end
+
+
+version :thumb do
+    process thumbnail: [{format: 'png', quality: 10,seek: '50%' ,square: true, size: 192, strip: false, logger: Rails.logger}]
+    def full_filename for_file
+      png_name for_file, version_name
+    end
+    process :fix_content_type
+end
+
 
   def fix_content_type
       file.content_type = 'image/png' if file

@@ -7,11 +7,15 @@ end
 #gem 'carrierwave-ffmpeg'
 #gem 'carrierwave'
 #gem 'ffmpeg-ruby'
+gem 'therubyracer', :platforms => :ruby
+gem 'execjs'
 gem 'carrierwave-video-thumbnailer'
 gem  'streamio-ffmpeg'
 gem 'ffmpeg'
 gem "fog"
 gem 'carrierwave-video', github: 'evgeniy-trebin/carrierwave-video'
+
+gem 'responders'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'mysql2'
 gem 'rails', '~> 5.1.4'
