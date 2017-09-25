@@ -5,15 +5,15 @@ services:
         ports:
         - "3307:3307"
         environment:
-          MYSQL_ROOT_PASSWORD: 031.053.
+          MYSQL_ROOT_PASSWORD: 123
           MYSQL_USER: root
-          MYSQL_PASSWORD:  031.053.
+          MYSQL_PASSWORD:  123
           MYSQL_DATABASE: videos
           MYSQL_HOST: videos_db
       videos_ms:
         build: .
-        command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails db:migrate && bundle exec rails s -p 3001 -b '0.0.0.0'"
+        command: bash -c "sleep 40 && rm -f tmp/pids/server.pid && bundle exec rails db:migrate && bundle exec rails s -p 3002 -b '0.0.0.0'"
         ports:
-          - "3001:3001"
+          - "3002:3002"
         depends_on:
           - videos_db

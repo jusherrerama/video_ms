@@ -30,22 +30,19 @@ class VideosController < ApplicationController
 
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
-  def update
-    respond_to do |format|
+  def update    
       if @video.update(video_params)
         render json: @video, status: :ok
       else
         render json: @video.errors, status: :unprocessable_entity
       end
-    end
   end
   # DELETE /videos/1
   # DELETE /videos/1.json
   def destroy
-    @video.destroy
-    respond_to do |format|
-      render json: @video.errors, status: :no_content
-    end
+    @video.destroy   
+     render json: @video.errors, status: :no_content
+    
   end
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -38,7 +38,7 @@ end
   end
 
   def extension_white_list
-      %w( mp4 jpg jpeg gif png )
+    %w(mov avi mp4 mkv wmv mpg)
   end
 
   protected
