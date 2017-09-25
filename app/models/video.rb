@@ -1,4 +1,6 @@
 class Video < ApplicationRecord
+  extend CarrierWave::Mount
+  extend CarrierWaveDirect::Mount
   mount_uploader :address, AddressUploader
  categories = %w( others fun scary)
 #  enum category: [ :others ,:fun,:scary  ]
@@ -16,5 +18,13 @@ class Video < ApplicationRecord
   def set_success2 (t)
     self.time = t
   end
+
+  def save_and_process_avatar(options = {})
+    puts "ascadasfd"
+     @video.remote_address_url = 'https://9space.s3.amazonaws.com/uploads/fdbe414f-786d-4446-ac58-02422494ff71.mp4'
+
+ end
+
+
 
 end

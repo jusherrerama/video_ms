@@ -15,6 +15,9 @@ gem 'ffmpeg'
 gem "fog"
 gem 'carrierwave-video', github: 'evgeniy-trebin/carrierwave-video'
 
+gem 'carrierwave_direct'
+
+
 gem 'responders'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'mysql2'

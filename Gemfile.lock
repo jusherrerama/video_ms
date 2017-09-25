@@ -56,6 +56,10 @@ GEM
       mime-types (>= 1.16)
     carrierwave-video-thumbnailer (0.1.4)
       carrierwave
+    carrierwave_direct (0.0.15)
+      carrierwave
+      fog
+      uuidtools
     concurrent-ruby (1.0.5)
     erubi (1.6.1)
     excon (0.59.0)
@@ -314,6 +318,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2017.2)
       tzinfo (>= 1.0.0)
+    uuidtools (2.1.5)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -330,6 +335,7 @@ DEPENDENCIES
   byebug
   carrierwave-video!
   carrierwave-video-thumbnailer
+  carrierwave_direct
   execjs
   ffmpeg
   fog

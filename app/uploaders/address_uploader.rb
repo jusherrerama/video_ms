@@ -1,6 +1,7 @@
 class AddressUploader < CarrierWave::Uploader::Base
   include CarrierWave::Video
   include CarrierWave::Video::Thumbnailer
+  include CarrierWaveDirect::Uploader
   storage :fog
   process :save_video_duration
 #  process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]

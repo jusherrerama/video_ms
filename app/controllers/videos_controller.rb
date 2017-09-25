@@ -18,6 +18,9 @@ class VideosController < ApplicationController
   # POST /videos.json
   def create
      @video = Video.new(video_params)
+     if video_params["url_address"] != nil
+       @video.remote_address_url = video_params["url_address"]
+     end    
      if @video.save
           render json: @video, status: :created
      else
@@ -52,6 +55,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:name, :category,:time, :user_id, :address)
+      params.require(:video).permit(:name, :category,:time, :user_id, :address, :url_address,:likes,:dislikes,:comments,:visits)
     end
 end
